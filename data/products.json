@@ -1,0 +1,27 @@
+[
+  {
+    "slug": "automate", "name": "AutoMate", "subtitle": "鼠标键盘自动化工具", "category": "自动化", "icon": "automate", "color": "blue", "status": "preview", "featured": true,
+    "description": "录制一次，重复执行，让电脑替你完成重复操作。", "longDescription": "AutoMate 面向需要重复操作的 Windows 用户。通过录制和执行鼠标、键盘操作，减少机械性的点击与输入，把时间留给更重要的工作。",
+    "features": ["录制鼠标与键盘操作", "重复执行已保存的任务", "适合日常办公与重复性操作", "简洁直观的 Windows 使用体验"],
+    "scenarios": ["重复的数据录入", "固定流程的鼠标键盘操作", "日常办公任务", "个人效率提升"],
+    "platform": "Windows 10 / 11 · 64 位", "version": "", "updatedAt": "", "downloadUrl": "", "purchaseUrl": "", "documentationUrl": "", "screenshots": []
+  },
+  {
+    "slug": "auto-key", "name": "自动按键工具", "subtitle": "键盘自动化", "category": "输入辅助", "icon": "keyboard", "color": "purple", "status": "preview", "featured": false,
+    "description": "自定义按键与执行方式，轻松处理重复输入。", "longDescription": "为重复按键需求设计的轻量工具，让常见的键盘操作更容易配置和执行。",
+    "features": ["自定义按键", "重复输入辅助", "简洁的操作界面"], "scenarios": ["重复键盘输入", "个人日常操作", "简单的快捷操作"],
+    "platform": "Windows", "version": "", "updatedAt": "", "downloadUrl": "", "purchaseUrl": "", "documentationUrl": "", "screenshots": []
+  },
+  {
+    "slug": "auto-click", "name": "连点器", "subtitle": "轻量点击工具", "category": "输入辅助", "icon": "cursor", "color": "green", "status": "preview", "featured": false,
+    "description": "让重复点击变得简单，减少不必要的手动操作。", "longDescription": "针对重复鼠标点击场景设计的轻量工具，帮助你减少机械性操作。",
+    "features": ["重复点击辅助", "简单易用", "适合个人效率场景"], "scenarios": ["重复鼠标点击", "固定位置操作", "日常效率辅助"],
+    "platform": "Windows", "version": "", "updatedAt": "", "downloadUrl": "", "purchaseUrl": "", "documentationUrl": "", "screenshots": []
+  },
+  {
+    "slug": "file-tools", "name": "文件批处理工具", "subtitle": "文件管理", "category": "文件处理", "icon": "file", "color": "orange", "status": "planned", "featured": false,
+    "description": "未来计划推出，帮助你更高效地整理和处理文件。", "longDescription": "这是 Lucas 正在规划的产品方向，计划围绕批量文件处理与日常文件管理提供实用功能。具体功能与发布时间尚未确定。",
+    "features": ["产品规划中", "具体功能以正式发布为准"], "scenarios": ["文件整理", "日常文件管理"],
+    "platform": "Windows（计划）", "version": "", "updatedAt": "", "downloadUrl": "", "purchaseUrl": "", "documentationUrl": "", "screenshots": []
+  }
+]

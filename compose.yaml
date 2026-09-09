@@ -1,0 +1,14 @@
+services:
+  website:
+    build: .
+    container_name: lucas-website
+    restart: unless-stopped
+    ports:
+      - "${LUCAS_BIND:-127.0.0.1}:${LUCAS_PORT:-8080}:80"
+    security_opt:
+      - no-new-privileges:true
+    read_only: true
+    tmpfs:
+      - /var/cache/nginx
+      - /var/run
+      - /tmp
