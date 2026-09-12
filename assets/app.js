@@ -3,11 +3,21 @@ const icons={automate:'<path d="M12 3 3 21h5l4-8 4 8h5L12 3Z"/><path d="M9 17h6"
 Object.assign(icons,{message:'<path d="M20 11.5a7.5 7.5 0 0 1-8 7.5 8.6 8.6 0 0 1-3.8-.9L4 20l1.3-3.8A7.2 7.2 0 0 1 4 12a7.5 7.5 0 0 1 8-7.5 7.5 7.5 0 0 1 8 7Z"/><path d="M8 12h.01M12 12h.01M16 12h.01"/>',camera:'<path d="M4 7h3l1.5-2h7L17 7h3a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2Z"/><circle cx="12" cy="13" r="3.5"/>',eye:'<path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"/><circle cx="12" cy="12" r="2.5"/>',reply:'<path d="M9 8 4 12l5 4v-3c5 0 8 2 10 5-.5-6-4-10-10-10Z"/>'});
 const icon=(name,size=20)=>`<svg class="icon" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${icons[name]||icons.info}</svg>`;
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const productIconAssets={
+  automate:'/assets/product-icons/automate.png',
+  'mouse-assistant':'/assets/product-icons/mouse-assistant.png',
+  'message-assistant':'/assets/product-icons/message-assistant.png',
+  'keyboard-assistant':'/assets/product-icons/keyboard-assistant.png',
+  'scheduled-screenshot':'/assets/product-icons/scheduled-screenshot.png'
+};
 let products=[],currentRoute='/';
 const productUrl=p=>`/products/${encodeURIComponent(p.slug)}`;
 const available=p=>p.status==='released'&&!!p.downloadUrl;
 const statusLabel=p=>({released:'已发布',preview:'开发预览',planned:'规划中'}[p.status]||'资料待完善');
-const productIcon=(p,size=25)=>`<span class="product-icon ${esc(p.color)}">${icon(p.icon,size)}</span>`;
+const productIcon=(p,size=25)=>{
+  const asset=productIconAssets[p.slug];
+  return `<span class="product-icon ${esc(p.color)}">${asset?`<img src="${asset}" width="${size}" height="${size}" alt="" aria-hidden="true">`:icon(p.icon,size)}</span>`;
+};
 const link=(href,label,cls='',extra='')=>`<a class="${cls}" href="${esc(href)}" ${extra}>${label}</a>`;
 const button=(href,label,secondary=false,extra='')=>link(href,label,`btn ${secondary?'btn-secondary':'btn-primary'}`,extra);
 const navItems=[['/','首页'],['/products','产品中心'],['/downloads','下载中心'],['/help','帮助中心'],['/about','关于我们']];
