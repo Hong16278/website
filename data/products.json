@@ -1,27 +1,51 @@
 [
   {
-    "slug": "automate", "name": "AutoMate", "subtitle": "鼠标键盘自动化工具", "category": "自动化", "icon": "automate", "color": "blue", "status": "preview", "featured": true,
-    "description": "录制一次，重复执行，让电脑替你完成重复操作。", "longDescription": "AutoMate 面向需要重复操作的 Windows 用户。通过录制和执行鼠标、键盘操作，减少机械性的点击与输入，把时间留给更重要的工作。",
-    "features": ["录制鼠标与键盘操作", "重复执行已保存的任务", "适合日常办公与重复性操作", "简洁直观的 Windows 使用体验"],
-    "scenarios": ["重复的数据录入", "固定流程的鼠标键盘操作", "日常办公任务", "个人效率提升"],
-    "platform": "Windows 10 / 11 · 64 位", "version": "", "updatedAt": "", "downloadUrl": "", "purchaseUrl": "", "documentationUrl": "", "screenshots": []
+    "slug": "automate", "name": "AutoMate", "subtitle": "鼠标键盘自动化", "category": "自动化", "icon": "automate", "color": "blue", "status": "released", "featured": true,
+    "description": "录制一次，重复执行，让电脑替你完成重复操作。", "longDescription": "AutoMate 面向需要重复操作的 Windows 用户。通过录制和回放鼠标、键盘操作，减少机械性的点击与输入，把时间留给更重要的工作。",
+    "features": ["录制鼠标与键盘操作", "保存任务并按需重复执行", "支持循环执行与紧急停止", "面向日常办公与重复性操作"],
+    "scenarios": ["重复数据录入", "固定流程操作", "日常办公任务", "个人效率提升"],
+    "platform": "Windows 10 / 11 · 64 位", "version": "1.1.0", "updatedAt": "", "downloadUrl": "", "purchaseUrl": "", "documentationUrl": "", "screenshots": []
   },
   {
-    "slug": "auto-key", "name": "自动按键工具", "subtitle": "键盘自动化", "category": "输入辅助", "icon": "keyboard", "color": "purple", "status": "preview", "featured": false,
-    "description": "自定义按键与执行方式，轻松处理重复输入。", "longDescription": "为重复按键需求设计的轻量工具，让常见的键盘操作更容易配置和执行。",
-    "features": ["自定义按键", "重复输入辅助", "简洁的操作界面"], "scenarios": ["重复键盘输入", "个人日常操作", "简单的快捷操作"],
-    "platform": "Windows", "version": "", "updatedAt": "", "downloadUrl": "", "purchaseUrl": "", "documentationUrl": "", "screenshots": []
+    "slug": "mouse-assistant", "name": "鼠标助手", "subtitle": "多点鼠标循环点击", "category": "鼠标自动化", "icon": "cursor", "color": "green", "status": "released", "featured": true,
+    "description": "录入多个点击位置，按设置的顺序循环执行。", "longDescription": "鼠标助手用于录入当前鼠标坐标并组织多个点击动作。每个动作可以保留独立的等待时间，适合需要按固定顺序重复点击的 Windows 场景。",
+    "features": ["录入多个鼠标点击位置", "按动作顺序循环执行", "每个动作保留独立等待时间", "支持更新检查与体验反馈入口"],
+    "scenarios": ["固定位置多步点击", "重复网页或桌面操作", "测试中的坐标回放", "个人效率辅助"],
+    "platform": "Windows 10 / 11 · 64 位", "version": "1.0.4", "updatedAt": "", "downloadUrl": "", "purchaseUrl": "", "documentationUrl": "", "screenshots": []
   },
   {
-    "slug": "auto-click", "name": "连点器", "subtitle": "轻量点击工具", "category": "输入辅助", "icon": "cursor", "color": "green", "status": "preview", "featured": false,
-    "description": "让重复点击变得简单，减少不必要的手动操作。", "longDescription": "针对重复鼠标点击场景设计的轻量工具，帮助你减少机械性操作。",
-    "features": ["重复点击辅助", "简单易用", "适合个人效率场景"], "scenarios": ["重复鼠标点击", "固定位置操作", "日常效率辅助"],
-    "platform": "Windows", "version": "", "updatedAt": "", "downloadUrl": "", "purchaseUrl": "", "documentationUrl": "", "screenshots": []
+    "slug": "message-assistant", "name": "定时消息助手", "subtitle": "重复聊天与办公输入", "category": "输入辅助", "icon": "message", "color": "purple", "status": "released", "featured": false,
+    "description": "捕获输入框后，按确定顺序执行多条话术。", "longDescription": "定时消息助手面向重复聊天和办公输入场景。它会记住目标输入位置，并按全部发送、逐行发送或逐段发送的规则，以确定顺序执行已配置的话术。",
+    "features": ["F8 捕获目标输入框", "全部、逐行、逐段三种发送方式", "保留原始文本的空格、空行与缩进", "支持循环、暂停和紧急停止"],
+    "scenarios": ["重复办公输入", "按顺序填写多条内容", "需要保留格式的文本粘贴", "日常聊天辅助"],
+    "platform": "Windows 10 / 11 · 64 位", "version": "1.0.13", "updatedAt": "", "downloadUrl": "", "purchaseUrl": "", "documentationUrl": "", "screenshots": []
   },
   {
-    "slug": "file-tools", "name": "文件批处理工具", "subtitle": "文件管理", "category": "文件处理", "icon": "file", "color": "orange", "status": "planned", "featured": false,
-    "description": "未来计划推出，帮助你更高效地整理和处理文件。", "longDescription": "这是 Lucas 正在规划的产品方向，计划围绕批量文件处理与日常文件管理提供实用功能。具体功能与发布时间尚未确定。",
-    "features": ["产品规划中", "具体功能以正式发布为准"], "scenarios": ["文件整理", "日常文件管理"],
-    "platform": "Windows（计划）", "version": "", "updatedAt": "", "downloadUrl": "", "purchaseUrl": "", "documentationUrl": "", "screenshots": []
+    "slug": "keyboard-assistant", "name": "键盘点击助手", "subtitle": "按键与组合键循环", "category": "输入辅助", "icon": "keyboard", "color": "blue", "status": "released", "featured": true,
+    "description": "录入按键或组合键，按设置的次数与间隔循环执行。", "longDescription": "键盘点击助手用于需要重复键盘操作的 Windows 场景。先捕获目标窗口，再按顺序录入普通按键或 Ctrl、Alt、Shift 组合键，并设置循环和等待规则。",
+    "features": ["捕获目标窗口，降低误发风险", "录入普通按键和 Ctrl、Alt、Shift 组合键", "每步独立设置按下时长与等待时间", "支持有限循环、无限循环、暂停与紧急停止"],
+    "scenarios": ["固定按键序列", "重复键盘输入", "桌面软件测试", "个人效率操作"],
+    "platform": "Windows 10 / 11 · 64 位", "version": "1.0.0", "updatedAt": "", "downloadUrl": "", "purchaseUrl": "", "documentationUrl": "", "screenshots": []
+  },
+  {
+    "slug": "scheduled-screenshot", "name": "定时截图", "subtitle": "区域与画面变化截图", "category": "屏幕工具", "icon": "camera", "color": "orange", "status": "released", "featured": false,
+    "description": "按时间、画面变化或手动触发，完成指定区域截图。", "longDescription": "定时截图是一款电脑区域截图工具，支持定时截图、画面变化截图和一键截图，适合需要批量或重复记录屏幕内容的工作。",
+    "features": ["定时执行区域截图", "画面变化时自动截图", "一键截图与自定义区域", "适合重复性的屏幕记录"],
+    "scenarios": ["定时屏幕记录", "指定区域留档", "画面变化监测记录", "办公与测试截图"],
+    "platform": "Windows 10 / 11 · 64 位", "version": "1.0.0", "updatedAt": "", "downloadUrl": "", "purchaseUrl": "", "documentationUrl": "", "screenshots": []
+  },
+  {
+    "slug": "screen-alert", "name": "识别提醒助手", "subtitle": "屏幕变化与文字识别提醒", "category": "屏幕工具", "icon": "eye", "color": "purple", "status": "preview", "featured": false,
+    "description": "监测指定屏幕区域，在画面变化或目标文字出现时提醒。", "longDescription": "识别提醒助手正在开发中。它计划用于监测屏幕指定区域，可按画面变化百分比或 Windows OCR 识别到的目标文字、数字进行提醒。",
+    "features": ["监测指定屏幕区域", "按画面变化百分比判断", "目标文字或数字识别提醒", "支持检测间隔、阈值和提醒冷却"],
+    "scenarios": ["等待固定状态出现", "屏幕变化提醒", "办公与测试状态监测", "个人效率提醒"],
+    "platform": "Windows 10 / 11 · 开发预览", "version": "1.0.0 开发中", "updatedAt": "", "downloadUrl": "", "purchaseUrl": "", "documentationUrl": "", "screenshots": []
+  },
+  {
+    "slug": "quick-reply-assistant", "name": "快捷回复助手", "subtitle": "本地话术库与输入辅助", "category": "输入辅助", "icon": "reply", "color": "green", "status": "preview", "featured": false,
+    "description": "管理话术与素材，并将选定内容填入当前聊天输入框。", "longDescription": "快捷回复助手目前是本地功能预览。它用于建立话术库、管理文字图片或文件素材，并将选定内容填入已捕获的聊天输入框；不读取聊天记录，也不确认消息是否送达。",
+    "features": ["管理分类、话术和本地素材", "捕获当前聊天输入框", "填入文字、图片或文件", "组合话术可手动继续或随时停止"],
+    "scenarios": ["常用话术整理", "客服与办公输入辅助", "重复文本填入", "个人沟通效率"],
+    "platform": "Windows 10 / 11 · 本地预览", "version": "0.1.0 预览", "updatedAt": "", "downloadUrl": "", "purchaseUrl": "", "documentationUrl": "", "screenshots": []
   }
 ]

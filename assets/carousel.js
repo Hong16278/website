@@ -1,4 +1,4 @@
-const CAROUSEL_PRODUCTS = ['automate', 'auto-key', 'auto-click'];
+const CAROUSEL_PRODUCTS = ['automate', 'mouse-assistant', 'keyboard-assistant'];
 const CAROUSEL_INTERVAL = 6000;
 
 const carouselCopy = {
@@ -10,27 +10,27 @@ const carouselCopy = {
     caption: '把重复的操作\n交给软件来完成',
     kind: 'automate'
   },
-  'auto-key': {
-    eyebrow: '键盘输入辅助',
+  'keyboard-assistant': {
+    eyebrow: '键盘按键自动化',
     line1: '把重复按键',
     accent: '交给工具',
-    description: '配置需要的按键、间隔与执行方式，把高频重复输入变成一次简单设置。',
+    description: '捕获目标窗口后，依次录入按键或组合键，按设置的次数与间隔重复执行。',
     caption: '重复输入少一点\n专注时间多一点',
     kind: 'keyboard'
   },
-  'auto-click': {
-    eyebrow: '鼠标点击辅助',
-    line1: '需要连点时',
-    accent: '不再手动重复',
-    description: '针对固定位置和连续点击场景设计，让重复鼠标操作更轻松、更稳定。',
-    caption: '把机械点击\n变成自动执行',
-    kind: 'clicker'
+  'mouse-assistant': {
+    eyebrow: '多点鼠标自动化',
+    line1: '多个点击动作',
+    accent: '按顺序完成',
+    description: '录入多个鼠标坐标并设置各自等待时间，把固定的多步点击交给工具循环执行。',
+    caption: '把多步点击\n变成自动执行',
+    kind: 'mouse'
   }
 };
 
 const miniIcon = (kind) => {
   if (kind === 'keyboard') return '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="3"/><path d="M6 9h.01M10 9h.01M14 9h.01M18 9h.01M6 12h.01M10 12h.01M14 12h.01M18 12h.01M7 15h10"/></svg>';
-  if (kind === 'clicker') return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 3 14 9-7 1-3 7-4-17Z"/><path d="m14.5 14.5 4 4"/></svg>';
+  if (kind === 'mouse') return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 3 14 9-7 1-3 7-4-17Z"/><path d="m14.5 14.5 4 4"/></svg>';
   return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 3 21h5l4-8 4 8h5L12 3Z"/><path d="M9 17h6"/></svg>';
 };
 
@@ -51,7 +51,7 @@ function mockupMarkup(product, copy) {
       </div>
     </div>`;
   }
-  if (copy.kind === 'clicker') {
+  if (copy.kind === 'mouse') {
     return `<div class="carousel-app-window clicker-window">
       <div class="carousel-windowbar"><span class="window-dots"><i></i><i></i><i></i></span><strong>${name}</strong><span>— □ ×</span></div>
       <div class="carousel-app-body clicker-body">
@@ -60,11 +60,11 @@ function mockupMarkup(product, copy) {
           <strong>点击位置已锁定</strong><small>屏幕坐标 X 846 · Y 512</small>
         </div>
         <div class="clicker-settings">
-          <div class="workspace-head"><div><small>点击任务</small><h3>连续点击</h3></div><span class="status-pill">就绪</span></div>
-          <div class="setting-row"><div><strong>点击间隔</strong><small>两次点击之间的时间</small></div><em>80 ms</em></div>
-          <div class="setting-row"><div><strong>点击次数</strong><small>执行完成后自动停止</small></div><em>500 次</em></div>
-          <div class="setting-row"><div><strong>快捷键启动</strong><small>随时开始或停止</small></div><em>F8</em></div>
-          <button class="wide-run">▶ 开始连点</button>
+          <div class="workspace-head"><div><small>动作列表</small><h3>多点点击任务</h3></div><span class="status-pill">就绪</span></div>
+          <div class="setting-row"><div><strong>动作 01 · X 846 / Y 512</strong><small>执行后等待时间</small></div><em>120 ms</em></div>
+          <div class="setting-row"><div><strong>动作 02 · X 1032 / Y 618</strong><small>执行后等待时间</small></div><em>300 ms</em></div>
+          <div class="setting-row"><div><strong>F6 添加当前位置</strong><small>将鼠标坐标录入动作列表</small></div><em>准备就绪</em></div>
+          <button class="wide-run">▶ 开始执行</button>
         </div>
       </div>
     </div>`;
