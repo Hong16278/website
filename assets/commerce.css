@@ -1,4 +1,11 @@
 .brand-mark.lucas-logo{background:#fff url('/assets/lucas-logo.png') 50% 18%/88px auto no-repeat;border:1px solid #d7e4ff;box-shadow:0 4px 12px rgba(21,92,224,.16)}
+.brand:has(.brand-full-logo){gap:0}
+.brand-full-logo{display:flex;align-items:center;gap:6px;width:236px;height:44px;overflow:hidden}
+.brand-full-logo span{display:block;flex:none;background-image:url('/assets/lucas-logo.png');background-repeat:no-repeat}
+.brand-full-logo .lucas-symbol{width:42px;height:44px;background-size:100px auto;background-position:55% 18%}
+.brand-full-logo .lucas-word{width:126px;height:32px;background-size:236px auto;background-position:49% 70%}
+.brand-full-logo .lucas-cn{width:56px;height:16px;background-size:209px auto;background-position:50% 84%}
+.site-footer .brand-full-logo{transform:scale(.94);transform-origin:left center}
 .product-price{color:#1762d5;font-size:.88rem;font-weight:700;margin:-.25rem 0 1rem}
 .detail-price{margin:1.1rem 0 0;font-size:1rem}
 .side-price{color:#1762d5;font-weight:700;margin:0 0 1rem}

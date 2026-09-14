@@ -2,6 +2,7 @@ const commerceProducts=await fetch('/data/products.json',{cache:'no-store'}).the
 const commerceByName=new Map(commerceProducts.map(product=>[product.name,product]));
 function commerceButton(product){const button=document.createElement('a');button.className='btn btn-secondary taobao-buy';button.href=product.purchaseUrl;button.target='_blank';button.rel='noopener noreferrer';button.textContent='前往淘宝购买';return button}
 function updateCommerce(){
+  document.querySelectorAll('.brand').forEach(brand=>{if(brand.dataset.fullLogoApplied)return;const logo=document.createElement('span');logo.className='brand-full-logo';logo.setAttribute('aria-label','Lucas 软件开发');for(const className of ['lucas-symbol','lucas-word','lucas-cn']){const part=document.createElement('span');part.className=className;part.setAttribute('aria-hidden','true');logo.append(part)}brand.replaceChildren(logo);brand.dataset.fullLogoApplied='true'});
   document.querySelectorAll('a[href*="item.taobao.com"]').forEach(link=>{if(link.dataset.taobaoApplied)return;link.textContent='前往淘宝购买';link.classList.add('taobao-buy');link.dataset.taobaoApplied='true'});
   const name=document.querySelector('.detail-hero h1')?.textContent?.trim(),product=commerceByName.get(name);
   if(product?.pricing){
