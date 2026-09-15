@@ -5,8 +5,13 @@
 @media(max-width:380px){.container{width:calc(100% - 28px)}.hero h1{font-size:42px}.hero-actions .btn{min-width:0;flex:1;padding:10px 12px;font-size:12px}.mockup-body{grid-template-columns:77px 1fr}.mockup-menu{gap:3px}.mockup-menu .icon{width:12px}.mockup-content-top>span{display:none}.scenario-grid{gap:8px}.scenario-card h3{font-size:13px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
 
-/* The brand is a single responsive asset so no part of the mark can be clipped. */
+/* Use the exact artwork from the supplied square master, recomposed as a compact horizontal lockup. */
 .brand{gap:0}
-.brand-logo{display:block;width:226px;height:46px;object-fit:contain}
-.site-footer .brand-logo{width:215px;height:44px}
-@media(max-width:760px){.brand-logo{width:188px;height:40px}}
+.brand-lockup{display:flex;align-items:center;gap:12px;width:180px;height:48px;overflow:visible}
+.brand-source{display:block;flex:none;background-image:url('/assets/lucas-logo.png');background-repeat:no-repeat}
+.brand-source-symbol{width:43px;height:48px;background-size:100.3px 100.3px;background-position:-31.4px -13.2px}
+.brand-source-copy{display:flex;flex-direction:column;justify-content:center;gap:1px;width:125px;height:48px}
+.brand-source-word{width:125px;height:29px;background-size:226px 226px;background-position:-52.6px -141.3px}
+.brand-source-cn{width:125px;height:12px;background-size:226px 226px;background-position:-52.8px -178.6px}
+.site-footer .brand-lockup{transform:scale(.95);transform-origin:left center}
+@media(max-width:760px){.brand{width:150px}.brand-lockup{transform:scale(.83);transform-origin:left center}.site-footer .brand{width:180px}.site-footer .brand-lockup{transform:scale(.95)}}
